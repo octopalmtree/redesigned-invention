@@ -1,0 +1,49 @@
+:root {
+    --main-font: 'Lato', sans-serif;
+    --second-font:  'Montserrat', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: var(--main-font);
+    font-weight: 300;
+    color: wheat;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 90vh;
+    background-color: rgba(0, 0, 0, 0.493);
+    overflow: hidden;
+    position: relative;
+ 
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+
+}
+
+/* [class*="btn"] {
+    
+} */
