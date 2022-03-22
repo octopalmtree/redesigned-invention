@@ -134,8 +134,8 @@ loadSong(songs[songIndex]);
 
 function loadSong(song) {
     hFour.textContent = `${song}`;
-    audioOne.src = `/music/${song}.mp3`;
-    audioImg.src = `/images/${song}.jpeg`;
+    audioOne.src = `music/${song}.mp3`; 
+    audioImg.src = `images/${song}.jpeg`;
 
 }
 
@@ -403,8 +403,8 @@ function newCatBtnTwo(politicsBtn, bizBtn, housePod, position,lawPod) {
     
     function loadSong(song) {
         hFour.textContent = `${song}`;
-        audioOne.src = `/music/${song}.mp3`;
-        audioImg.src = `/images/${song}.jpeg`;
+        audioOne.src = `music/${song}.mp3`;
+        audioImg.src = `images/${song}.jpeg`;
     
     }
     
@@ -671,8 +671,8 @@ function newCatBtnTwo(politicsBtn, bizBtn, housePod, position,lawPod) {
         
         function loadSong(song) {
             hFour.textContent = `${song}`;
-            audioOne.src = `/music/${song}.mp3`;
-            audioImg.src = `/images/${song}.jpeg`;
+            audioOne.src = `music/${song}.mp3`;
+            audioImg.src = `images/${song}.jpeg`;
         
         }
         
@@ -938,8 +938,8 @@ function newCatBtnTwo(politicsBtn, bizBtn, housePod, position,lawPod) {
             
             function loadSong(song) {
                 hFour.textContent = `${song}`;
-                audioOne.src = `/music/${song}.mp3`;
-                audioImg.src = `/images/${song}.jpeg`;
+                audioOne.src = `music/${song}.mp3`;
+                audioImg.src = `images/${song}.jpeg`;
             
             }
             
