@@ -210,7 +210,7 @@ span:hover {
     bottom: 0; 
     left: 0;
 
-    animation: rotate 8s linear infinite;
+/*     animation: rotate 8s linear infinite; */
 
     animation-play-state: paused;
 }
