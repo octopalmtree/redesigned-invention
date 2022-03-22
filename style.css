@@ -1,6 +1,7 @@
 :root {
     --main-font: 'Lato', sans-serif;
     --second-font:  'Montserrat', sans-serif;
+    --music-player-clr: rgba(78, 1, 1, 0.739);
 
 }
 
@@ -9,15 +10,35 @@
     padding: 0;
 }
 
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+}
+
 h1 {
     font-family: var(--main-font);
-    font-weight: 300;
-    color: wheat;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
     position: absolute;
-    top: 40%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    
 
+}
+
+
+#header-icon {
+    position: absolute;
+    opacity: 60%;
+    margin-top: 1em;
+    top: 0%;
+    left: 50%;
+    width: 10em;
+    transform: translate(-50%);
+    
 }
 
 .hero {
@@ -25,8 +46,8 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 90vh;
-    background-color: rgba(0, 0, 0, 0.493);
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
     overflow: hidden;
     position: relative;
  
@@ -44,6 +65,271 @@ h1 {
 
 }
 
-/* [class*="btn"] {
+
+
+[class^="btn"] {
+height: 50px;
+width: 120px;
+border: 0;
+font-family: var(--main-font);
+
+font-weight: 900;
+align-content: center;
+border-top: 2px solid #000000;
+border-bottom: 2px solid #000000;
+border-right: none;
+
+
+box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.63);
+background-color: rgba(232, 253, 222, 0.144);
+margin-right: 10px;
+margin-left: 10px;
+
+
+position: relative;
+transition: all 500ms ease-in-out;
+
+-moz-transition: all 500ms ease-in-out;
+-webkit-transition:  all 500ms ease-in-out;
+-o-transition: all 500ms ease-in-out;
+}
+
+[class^="btn"]::before {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.466);
+    height: 100%;
+    width: 0%;
+    top: 0%;
+    left: 0%;
+    transition: all 500ms ease-in-out;
+
+    -moz-transition: all 500ms ease-in-out;
+    -webkit-transition:  all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+}
+
+[class^="btn"] span {
+    position: relative;
+    color: white;
+    letter-spacing: 0.1rem;
+    transition: all 500ms ease-in-out;
+
+    -moz-transition: all 500ms ease-in-out;
+    -webkit-transition:  all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+}
+
+span:hover {
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+
+}
+
+[class^="btn"]:hover::before {
+    width: 100%;
+}
+
+[class^="btn"]:hover {
+    cursor: pointer; 
     
-} */
+}
+
+
+.social-media-icons {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+}
+
+.fa-brands.fa-instagram, 
+.fa-brands.fa-twitter, 
+.fa-brands.fa-facebook-f, 
+.fa-brands.fa-tiktok 
+{
+   color: white;
+   font-size: 25px;
+   margin-left: 1em;
+   margin-right: 1em;
+
+   transition: font-size 500ms ease-in-out;
+  
+}
+
+.fa-brands.fa-instagram:hover, 
+.fa-brands.fa-twitter:hover, 
+.fa-brands.fa-facebook-f:hover, 
+.fa-brands.fa-tiktok:hover 
+{
+   
+   font-size: 30px;
+   cursor: pointer;
+ 
+  
+}
+
+
+
+
+
+#all-pods {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%);
+
+}
+
+.music-container {
+    background-color: var(--music-player-clr);
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.411);
+    display: flex;
+    flex-direction: row;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+
+.img-container {
+    width: 110px;
+    position: relative;
+}
+
+
+.img-container img {
+    width: inherit;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+
+    animation: rotate 8s linear infinite;
+
+    animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@-moz-keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: var(--music-player-clr);
+    border: 0;
+    color: #dfdbdf;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+    background-color: rgba(212, 186, 186, 0.308);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 200px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+
+}
+
+.music-info h4 {
+    margin: 0;
+}
+
+.music-container.play .music-info{
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress-container {
+    background-color: rgb(255, 253, 253);    /* progress bar color */
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #e27792;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+@media only screen and (max-width: 550px) {
+   
+    .hero {
+       
+        flex-direction: column;
+
+    }
+
+    [class^="btn"] {
+        margin: 1em;
+    }
+
+    h1 {
+        /* display: none; */
+        font-size: 1em;
+        top: 24%;
+    }
+}
